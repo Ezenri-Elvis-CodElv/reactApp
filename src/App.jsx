@@ -6,9 +6,11 @@ import Shop from "./pages/Shop"
 import HomeRoute from "./routes/HomeRoute"
 import Dashboard from "./pages/Dashboard"
 import About from "./pages/About"
-import LoginPage from "./pages/LoginPage"
+import LoginPage from "./pages/Auth/LoginPage"
 import Category from "./components/Category"
-import SignUp from "./pages/SignUp"
+import SignUp from "./pages/Auth/SignUp"
+import PrivateRoute from "./routes/PrivateRoute"
+
 
 const App = () => {
   const routes = createBrowserRouter([
@@ -17,19 +19,15 @@ const App = () => {
     element: <HomeRoute />,
     children: [
       {
-        path: "",
+        path: "/",
         element: <Home />
        },
-      // {
-      //   path: "/Category",
-      //   element: <Category />
-      //  },
        {
         path: "/Contact",
         element: <Contact />
        },
        {
-        path: "/Shop/:productname",
+        path: "/Shop",
         element: <Shop />
        }
        
@@ -37,7 +35,13 @@ const App = () => {
    },
    {
     path: "/dashboard",
-    element: <Dashboard />
+    element: <PrivateRoute />,
+    children: [
+      {
+        path: '',
+        element: <Dashboard/>
+      }
+    ]
    },
    {
     path: "/about",

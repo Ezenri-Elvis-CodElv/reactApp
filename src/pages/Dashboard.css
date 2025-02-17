@@ -1,0 +1,43 @@
+.dashboard {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .dashboard h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .logout-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .logout-btn:hover {
+    background-color: darkred;
+  }
+
+  .home-btn{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: cursive;
+    border-radius: 5px;
+  }
+
+.home-btn:hover{
+ background-color: rgb(95, 94, 94);
+
+  }

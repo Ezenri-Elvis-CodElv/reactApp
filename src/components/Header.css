@@ -18,6 +18,12 @@
     padding: 20px;
 }
 
+.imgHeader{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+}
+
 nav {
     display: flex;
     justify-content: center;

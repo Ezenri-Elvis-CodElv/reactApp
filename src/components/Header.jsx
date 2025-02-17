@@ -25,6 +25,7 @@ const Header = () => {
   return (
     <div className="HeaderWrapper">
       <div onClick={handleBackToHome} className="Logo">
+        <img src="src/assets/Facelogo.png" alt=""  className="imgHeader"/>
         LOGO
       </div>
       
@@ -70,9 +71,9 @@ const Header = () => {
         </div>
       </nav>
       <div className="HeaderFooter">
-        <MdOutlineFavoriteBorder size={25} onClick={() => navigate("/SignUp")} />
-        <FaShoppingCart size={25} onClick={() => navigate("/about")} />
-        <CgProfile size={25} onClick={() => navigate("/loginpage")} />
+        <MdOutlineFavoriteBorder size={25} onClick={() => navigate()} />
+        <FaShoppingCart size={25} onClick={() => navigate("/Cart")} />
+        <CgProfile size={25} onClick={() => navigate("/dashboard")} />
       </div>
     </div>
   );
